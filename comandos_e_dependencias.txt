@@ -1,0 +1,83 @@
+
+
+----------------------------------------------------------------
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> CRIANDO AMBIENTE VIRTUAL NO LINUX 
+
+python3 -m venv ~/PYTHON/JWT/fastapi-mongodb-jwt/env-davi
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> CRIANDO AMBIENTE VIRTUAL NO WINDOWS 
+
+python -m venv c:/PYTHON/fastapi-mongodb-jwt/env-davi
+
+
+----------------------------------------------------------------
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ATIVANDO O AMBIENTE VIRTUAL NO LINUX 
+
+source ./python_env/bin/activate
+
+or just go to the directory
+
+cd /python_env/bin/
+and then
+
+source ./activate
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ATIVANDO O AMBIENTE VIRTUAL NO WINDOWS 
+
+.\venv\Scripts\activate
+
+
+--------------------------------------------------------------
+
+
+>>>>>>>>>>>>>>>>>>> INSTALANDO A FASTAPI (necessário estar com o ambiente virtual ativado)
+
+pip install fastapi "uvicorn[standard]"
+
+subir o server usando o uvicorn
+
+uvicorn app.app:app --reload
+uvicorn (pasta).(arquivo):(função) --reload
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>DEPENDENCIAS
+
+ao rodar esse repoitório em outra máquina é necessário deletar o ambiente virtual e criar outro.
+
+pip install python-decouple
+pip install python-decouple==3.1 (só funcionou com essa versão no linux)
+pip install beanie
+pip install email-validator
+pip install python-jose[cryptography] "passlib[bcrypt]"
+pip install python-multipart
+
+
+----------------------------------------------------------------------
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> BANCO DE DADOS
+instalar mongodb compass
+
+-------------------------------------------------------------
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> REQUERIMENTOS
+
+pip freeze > requirements.txt
+
+
+------------------------------------------------------------
+
+
+
+
+JWT_SECRET_KEY=1234
+JWT_REFRESH_SECRET_KEY=1234
+MONGO_CONNECTION_STRING=mongodb://localhost:27017/
+
+
+
+
+
