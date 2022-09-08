@@ -46,12 +46,33 @@ uvicorn (pasta).(arquivo):(função) --reload
 
 ao rodar esse repoitório em outra máquina é necessário deletar o ambiente virtual e criar outro.
 
+BACKEND
 pip install python-decouple
 pip install python-decouple==3.1 (só funcionou com essa versão no linux)
 pip install beanie
 pip install email-validator
 pip install python-jose[cryptography] "passlib[bcrypt]"
 pip install python-multipart
+
+FRONTEND
+requer node instalado
+npx create-react-app jwt-frontend
+navegar para jwt-frontend (nome do seu app react)
+yarn start
+ou
+npm start
+Dentro de src remover os arquivos e deixar somente
+    App.js
+    index.css
+    index.js
+Remover todas as importações desses arquivos
+raiz>>> yarn add @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^6
+raiz/frontend>>> yarn add @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^6
+raiz/frontend>>> yarn add axios react-router-dom@6 react-hook-form
+raiz/frontend>>> yarn add jwt-decode
+raiz/frontend>>> npm install react-router-dom
+raiz/frontend>>> npm install react-hook-form
+raiz/frontend>>> npm install axios
 
 
 ----------------------------------------------------------------------

@@ -9,7 +9,9 @@ class Settings(BaseSettings):
     ALGORITHM = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 15 #15 minutos
     REFRESH_TOKEN_EXPIRE_MINUTES: int = 60 * 24 * 7 #7 dias
-    BACKEND_CORS_ORIGINS: List[AnyHttpUrl] = []
+    BACKEND_CORS_ORIGINS: List[AnyHttpUrl] = [
+        "http://localhost:3000"
+    ]
     PROJECT_NAME: str = "CRUD_JWT_FASTAPI_MONGODB_DO_DAVI"
 
     #database
